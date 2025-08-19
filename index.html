@@ -1,138 +1,102 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CapCut Template Hub</title>
+  <title>CapCut Templates - Classy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+      background: linear-gradient(135deg, #0f0f1f, #1a1a2e, #16213e);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      font-family: 'Poppins', sans-serif;
     }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #00d4ff;
-      box-shadow: 0 0 25px rgba(0, 212, 255, 0.7);
-      margin-bottom: 15px;
-      object-fit: cover;
-    }
-    h1 {
-      font-size: 28px;
-      margin: 0;
-      background: linear-gradient(90deg, #00d4ff, #00ff9d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    p {
-      font-size: 15px;
-      color: #ccc;
-    }
-    .template-list {
-      width: 100%;
-      max-width: 600px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-    .template-item {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: transform 0.3s ease, background 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-    .template-item:hover {
+    .glass {
       background: rgba(255, 255, 255, 0.1);
-      transform: translateY(-4px) scale(1.02);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .template-info {
+    .glass:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+    .btn {
       display: flex;
       align-items: center;
-      gap: 12px;
-    }
-    .template-info img {
-      width: 50px;
-      height: 50px;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(90deg, #8e2de2, #4a00e0);
+      color: white;
+      padding: 12px 24px;
       border-radius: 12px;
-      border: 2px solid #00d4ff;
-    }
-    .template-title {
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .template-link {
-      background: linear-gradient(90deg, #00d4ff, #00ff9d);
-      color: #000;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: bold;
+      font-weight: 600;
       transition: 0.3s;
-      box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(142, 45, 226, 0.6);
     }
-    .template-link:hover {
-      box-shadow: 0 0 25px rgba(0, 255, 157, 0.8);
+    .btn:hover {
+      background: linear-gradient(90deg, #4a00e0, #8e2de2);
+      box-shadow: 0 0 25px rgba(142, 45, 226, 0.9);
+      transform: scale(1.05);
+    }
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {opacity: 1;}
     }
   </style>
 </head>
-<body>  <header>
-    <img src="https://instagram.fdel27-2.fna.fbcdn.net/v/t51.2885-19/461435307_122092231526902078_2845631475524425828_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fdel27-2.fna.fbcdn.net&_nc_cat=110&_nc_ohc=V1LqYHDkfhgQ7kNvgF9FSbN&_nc_gid=2e93ee7e13da4d5c9a54e215b52df0ee&edm=AJ9x6zYBAAAA&ccb=7-5&oh=00_AYAznTcbG05UtC5LfDn7QfM3xLo5PsrYRo7vAJHuHdK1ig&oe=66CC2D44&_nc_sid=65462d" alt="Instagram Profile Picture">
-    <h1>@4xsukoon</h1>
-    <p>First watch the tutorial, then explore and use the CapCut templates below.</p>
-  </header>  <div class="template-list">
-    <div class="template-item">
-      <div class="template-info">
-        <img src="https://seeklogo.com/images/C/capcut-logo-AD062E0E7F-seeklogo.com.png" alt="CapCut">
-        <span class="template-title">CapCut Template #1</span>
-      </div>
-      <a href="https://www.capcut.com/template-detail/7453863803332119861?template_id=7453863803332119861&share_token=94546543-c81e-4029-a067-babc00d6057d&enter_from=template_detail&region=US&language=en&platform=whatsapp&is_copy_link=0" class="template-link">Use</a>
-    </div><div class="template-item">
-  <div class="template-info">
-    <img src="https://seeklogo.com/images/C/capcut-logo-AD062E0E7F-seeklogo.com.png" alt="CapCut">
-    <span class="template-title">CapCut Template #2</span>
-  </div>
-  <a href="https://www.capcut.com/template-detail/7466001911330770229?template_id=7466001911330770229&share_token=62df7695-d6e5-47e1-aa83-2d068621d839&enter_from=template_detail&region=US&language=en&platform=whatsapp&is_copy_link=0" class="template-link">Use</a>
-</div>
+<body class="text-white flex flex-col items-center p-6">
 
-<div class="template-item">
-  <div class="template-info">
-    <img src="https://seeklogo.com/images/C/capcut-logo-AD062E0E7F-seeklogo.com.png" alt="CapCut">
-    <span class="template-title">CapCut Template #3</span>
+  <!-- Profile Section -->
+  <div class="glass p-6 flex flex-col items-center text-center fade-in w-full max-w-md">
+    <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" 
+         alt="Profile Picture" 
+         class="w-28 h-28 rounded-full border-4 border-purple-500 shadow-lg mb-4">
+    <h1 class="text-2xl font-bold">Classy Templates</h1>
+    <p class="text-gray-300 text-sm">Explore Viral CapCut Templates ⚡</p>
   </div>
-  <a href="https://www.capcut.com/template-detail/7500385878221557053?template_id=7500385878221557053&share_token=9a659294-d16a-4b02-a911-c737baf6da71&enter_from=template_detail&region=US&language=en&platform=copy_link&is_copy_link=1" class="template-link">Use</a>
-</div>
 
-<div class="template-item">
-  <div class="template-info">
-    <img src="https://seeklogo.com/images/C/capcut-logo-AD062E0E7F-seeklogo.com.png" alt="CapCut">
-    <span class="template-title">CapCut Template #4</span>
+  <!-- Templates List -->
+  <div class="grid gap-6 mt-8 w-full max-w-2xl">
+    <a href="https://www.capcut.com/template-detail/7453863803332119861?template_id=7453863803332119861&share_token=94546543-c81e-4029-a067-babc00d6057d" target="_blank" class="glass p-4 flex justify-between items-center">
+      <span class="text-lg font-medium">🔥 Viral Beat Template</span>
+      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+    </a>
+
+    <a href="https://www.capcut.com/template-detail/7466001911330770229?template_id=7466001911330770229&share_token=62df7695-d6e5-47e1-aa83-2d068621d839" target="_blank" class="glass p-4 flex justify-between items-center">
+      <span class="text-lg font-medium">🎶 Smooth Edit</span>
+      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+    </a>
+
+    <a href="https://www.capcut.com/template-detail/7500385878221557053?template_id=7500385878221557053&share_token=9a659294-d16a-4b02-a911-c737baf6da71" target="_blank" class="glass p-4 flex justify-between items-center">
+      <span class="text-lg font-medium">⚡ Trending Reel</span>
+      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+    </a>
+
+    <a href="https://www.capcut.com/template-detail/7525116727382871357?template_id=7525116727382871357&share_token=3c06a810-ccdd-4ae1-9be6-e511d7356202" target="_blank" class="glass p-4 flex justify-between items-center">
+      <span class="text-lg font-medium">✨ Aesthetic Flow</span>
+      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+    </a>
+
+    <a href="https://www.capcut.com/template-detail/7517695981433982269?template_id=7517695981433982269&share_token=f8a715ac-4b41-44ba-b00e-85e5a809923f" target="_blank" class="glass p-4 flex justify-between items-center">
+      <span class="text-lg font-medium">🌌 Futuristic Vibe</span>
+      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+    </a>
   </div>
-  <a href="https://www.capcut.com/template-detail/7525116727382871357?template_id=7525116727382871357&share_token=3c06a810-ccdd-4ae1-9be6-e511d7356202&enter_from=template_detail&region=US&language=en&platform=whatsapp&is_copy_link=0" class="template-link">Use</a>
-</div>
 
-<div class="template-item">
-  <div class="template-info">
-    <img src="https://seeklogo.com/images/C/capcut-logo-AD062E0E7F-seeklogo.com.png" alt="CapCut">
-    <span class="template-title">CapCut Template #5</span>
-  </div>
-  <a href="https://www.capcut.com/template-detail/7517695981433982269?template_id=7517695981433982269&share_token=f8a715ac-4b41-44ba-b00e-85e5a809923f&enter_from=template_detail&region=US&language=en&platform=whatsapp&is_copy_link=0" class="template-link">Use</a>
-</div>
-
-  </div></body>
+  <!-- Footer -->
+  <p class="mt-10 text-gray-400 text-sm">Made with ❤️ by Classy</p>
+</body>
 </html>
