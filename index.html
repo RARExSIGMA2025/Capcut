@@ -3,149 +3,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CapCut Templates - Classy</title>
+  <title>Classy Templates</title>
+  <!-- Tailwind CSS CDN for styling -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts for Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
   <style>
     body {
-      background: linear-gradient(135deg, #0f0f1f, #1a1a2e, #16213e);
-      background-size: 400% 400%;
-      animation: gradientMove 12s ease infinite;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
-    @keyframes gradientMove {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-    .glass {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .glass:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-    }
-    /* New button/template row styling */
-    .template-row {
-      display: flex;
-      align-items: center;
-      padding: 1rem;
-      gap: 1.5rem;
-      text-decoration: none;
-      color: white;
-    }
-    .template-row .profile-thumb {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #8e2de2;
-    }
-    .fade-in {
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-    }
-    @keyframes fadeIn {
-      to {opacity: 1;}
+    .glassmorphic-card {
+      background-color: rgba(31, 41, 55, 0.3);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(75, 85, 99, 0.5);
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
     }
   </style>
 </head>
-<body class="text-white flex flex-col items-center p-6">
+<body class="min-h-screen bg-gray-900 text-white flex flex-col items-center p-4 sm:p-8">
 
-  <!-- Profile Section -->
-  <div class="glass p-6 flex flex-col items-center text-center fade-in w-full max-w-md">
-    <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" 
-         alt="Profile Picture" 
-         class="w-28 h-28 rounded-full border-4 border-purple-500 shadow-lg mb-4">
-    <h1 class="text-2xl font-bold">Classy Templates</h1>
-    <p class="text-gray-300 text-sm">Explore Viral CapCut Templates ⚡</p>
+  <!-- Header Section -->
+  <header class="w-full max-w-4xl text-center mb-10">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-2">
+      Classy Templates
+    </h1>
+    <p class="text-lg text-gray-300">
+      Explore Viral CapCut Templates ⚡
+    </p>
+  </header>
+
+  <!-- Upload Form Section -->
+  <div id="upload-form-container" class="w-full max-w-md glassmorphic-card p-6 mb-8 flex flex-col gap-4">
+    <button id="toggle-upload-btn" class="w-full py-3 rounded-xl font-bold bg-purple-600 hover:bg-purple-700 transition-colors duration-200">
+      Upload a New Template
+    </button>
+    <form id="upload-form" class="flex-col gap-4 mt-4 hidden">
+      <input
+        type="url"
+        id="capcutUrl"
+        placeholder="CapCut Template URL"
+        class="w-full p-3 rounded-xl bg-gray-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-colors"
+        required
+      />
+      <input
+        type="url"
+        id="thumbnailUrl"
+        placeholder="Thumbnail Image URL"
+        class="w-full p-3 rounded-xl bg-gray-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-colors"
+        required
+      />
+      <input
+        type="url"
+        id="creatorPfpUrl"
+        placeholder="Creator's Profile Picture URL"
+        class="w-full p-3 rounded-xl bg-gray-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-colors"
+        required
+      />
+      <button
+        type="submit"
+        class="w-full py-3 rounded-xl font-bold bg-purple-600 hover:bg-purple-700 transition-colors duration-200"
+      >
+        Submit Template
+      </button>
+    </form>
   </div>
 
-  <!-- Templates List - New layout matching the provided image -->
-  <div class="grid gap-4 mt-8 w-full max-w-2xl">
-    <!-- Existing templates, now with new design -->
-    <a href="https://www.capcut.com/template-detail/7453863803332119861?template_id=7453863803332119861&share_token=94546543-c81e-4029-a067-babc00d6057d" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #101</span>
-      <!-- Three-dot icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
-    <a href="https://www.capcut.com/template-detail/7466001911330770229?template_id=7466001911330770229&share_token=62df7695-d6e5-47e1-aa83-2d068621d839" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #102</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
-    <a href="https://www.capcut.com/template-detail/7500385878221557053?template_id=7500385878221557053&share_token=9a659294-d16a-4b02-a911-c737baf6da71" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #103</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
-    <a href="https://www.capcut.com/template-detail/7525116727382871357?template_id=7525116727382871357&share_token=3c06a810-ccdd-4ae1-9be6-e511d7356202" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #104</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
-    <a href="https://www.capcut.com/template-detail/7517695981433982269?template_id=7517695981433982269&share_token=f8a715ac-4b41-44ba-b00e-85e5a809923f" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #105</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
+  <!-- Main Content Grid -->
+  <main class="w-full max-w-6xl">
+    <div id="template-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <p id="loading-message" class="text-center text-gray-400 text-lg col-span-full">Loading templates...</p>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="w-full max-w-4xl text-center mt-12 py-6 border-t border-gray-700 text-gray-400">
+    <p class="text-sm">Made with ❤️ by Classy</p>
+    <p class="text-xs mt-1">
+      <a href="https://www.instagram.com/4xSukoon" target="_blank" rel="noopener noreferrer" class="hover:underline">
+        Instagram: 4xSukoon
+      </a>
+    </p>
+  </footer>
+
+  <!-- Share Modal Container (Hidden by default) -->
+  <div id="share-modal-container" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 backdrop-blur-sm">
+    <div id="share-modal" class="relative w-full max-w-sm glassmorphic-card p-6 flex flex-col gap-4">
+      <!-- Modal content will be dynamically generated here -->
+    </div>
+  </div>
+
+  <!-- Custom Alert Container (Hidden by default) -->
+  <div id="custom-alert-container" class="hidden fixed top-5 left-1/2 -translate-x-1/2 z-[60]">
+    <div id="custom-alert" class="p-4 bg-purple-600 rounded-xl shadow-lg flex items-center gap-3 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.8" /><path d="M22 4 12 14.01l-3-3" /></svg>
+      <span id="alert-message"></span>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, onSnapshot, query, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // Global variables from the canvas environment
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+    const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
     
-    <!-- New templates added below -->
-    <a href="https://www.capcut.com/t/Zs8PVsWfo/" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #106</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
-    <a href="https://www.capcut.com/t/Zs8PgGXpr" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #107</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
-    <a href="https://www.capcut.com/template-detail/7497986635791895861?template_id=7497986635791895861&share_token=eb513307-2fea-43f7-a876-b86170b5f74a&enter_from=template_detail&region=US&language=en&platform=whatsapp&is_copy_link=0" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #108</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
-    <a href="https://www.capcut.com/t/Zs8PsVKHp" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #109</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
-    <a href="https://www.capcut.com/t/Zs8Pcs5KC" target="_blank" class="glass template-row">
-      <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" alt="Template Thumbnail" class="profile-thumb">
-      <span class="flex-grow text-lg font-medium">CapCut Template: #110</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </a>
+    // Initialize Firebase and Firestore
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
 
-  </div>
+    // Get DOM elements
+    const templateGrid = document.getElementById('template-grid');
+    const uploadFormContainer = document.getElementById('upload-form-container');
+    const toggleUploadBtn = document.getElementById('toggle-upload-btn');
+    const uploadForm = document.getElementById('upload-form');
+    const capcutUrlInput = document.getElementById('capcutUrl');
+    const thumbnailUrlInput = document.getElementById('thumbnailUrl');
+    const creatorPfpUrlInput = document.getElementById('creatorPfpUrl');
+    const modalContainer = document.getElementById('share-modal-container');
+    const shareModal = document.getElementById('share-modal');
+    const alertContainer = document.getElementById('custom-alert-container');
+    const alertMessageSpan = document.getElementById('alert-message');
+    const loadingMessage = document.getElementById('loading-message');
 
-  <!-- Footer -->
-  <p class="mt-10 text-gray-400 text-sm">Made with ❤️ by Classy</p>
+    let authReady = false;
+
+    // Show custom alert message
+    function showCustomAlert(message) {
+      alertMessageSpan.textContent = message;
+      alertContainer.classList.remove('hidden');
+      setTimeout(() => {
+        alertContainer.classList.add('hidden');
+      }, 3000);
+    }
+
+    // Function to copy text to clipboard
+    function copyToClipboard(text) {
+      const el = document.createElement('textarea');
+      el.value = text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      showCustomAlert('Link copied to clipboard!');
+    }
+
+    // Render template cards
+    function renderTemplates(templates) {
+      templateGrid.innerHTML = ''; // Clear existing templates
+      if (templates.length === 0) {
+        templateGrid.innerHTML = '<p class="text-center text-gray-400 text-lg col-span-full">No templates uploaded yet. Be the first to add one!</p>';
+      } else {
+        templates.forEach(template => {
+          const cardHtml = `
+            <div class="relative rounded-2xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-all duration-300 group">
+              <img src="${template.thumbnailUrl}" alt="${template.title}" class="w-full h-80 object-cover" onerror="this.src='https://placehold.co/500x800/22d3ee/ffffff?text=Image+Unavailable'">
+              <div class="absolute inset-0 p-4 flex flex-col justify-between">
+                <div class="flex justify-between items-center w-full">
+                  <img src="${template.creatorPfpUrl}" alt="Creator Profile" class="w-10 h-10 rounded-full border-2 border-white/50" onerror="this.src='https://placehold.co/40x40/c084fc/ffffff?text=PFP'">
+                  <button class="share-btn p-2 rounded-full bg-gray-800 bg-opacity-30 backdrop-blur-md border border-gray-700/50 hover:bg-white/20 transition-colors duration-200" aria-label="Share Template" data-template-id="${template.id}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1" /><circle cx="12" cy="5" r="1" /><circle cx="12" cy="19" r="1" /></svg>
+                  </button>
+                </div>
+                <div class="w-full flex flex-col gap-2 p-3 rounded-2xl bg-gray-800 bg-opacity-30 backdrop-blur-lg border border-gray-700/50">
+                  <h3 class="text-white text-md font-semibold truncate">${template.title}</h3>
+                  <a href="${template.capcutUrl}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-2 px-4 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition-colors duration-200">
+                    Use Template
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><path d="m8.59 13.51l6.83 3.4" /><path d="m8.59 10.49 6.83-3.4" /></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          `;
+          templateGrid.insertAdjacentHTML('beforeend', cardHtml);
+        });
+      }
+    }
+
+    // Handle share modal
+    function showShareModal(template) {
+      shareModal.innerHTML = `
+        <h3 class="text-xl font-bold text-white mb-2">Share Template</h3>
+        <button id="copy-btn" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg> Copy Link
+        </button>
+        <a href="https://wa.me/?text=${encodeURIComponent(template.capcutUrl)}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-green-500"><path d="M12.04 2.87c-5.46 0-9.91 4.45-9.91 9.91 0 1.74.46 3.42 1.35 4.9.15.26.24.56.24.88l-.05 1.57.1.66c.07.29-.02.6-.26.83l-.79.79.46 1.34c.14.4.6.66 1.05.66.45 0 .86-.2.98-.5l1.64-1.21c.28-.21.65-.29 1.02-.22l2.39.5c.34.07.7.07 1.05-.01l.94-.21c.42-.09.84-.13 1.25-.13 5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zm4.61 14.53c-.22.61-.83.65-1.12.55l-2.06-.92c-.3-.13-.6-.13-.9-.02-.15.06-.31.14-.46.22l-.76.43-.52.28c-.2.11-.4.18-.61.18-.21 0-.4-.05-.59-.13-.2-.08-.4-.2-.59-.34-.18-.16-.38-.34-.56-.55-.18-.2-.36-.42-.51-.65-.15-.24-.28-.48-.4-.7-.1-.2-.2-.42-.25-.6-.05-.18-.08-.36-.08-.55 0-.2.03-.38.08-.56.05-.18.15-.38.25-.56.1-.18.23-.38.38-.56.15-.18.3-.35.45-.51.15-.16.29-.32.42-.46.12-.15.22-.28.3-.4.07-.11.12-.2.12-.26-.14-.23-.29-.44-.41-.65-.12-.21-.23-.42-.32-.61-.09-.19-.18-.39-.24-.58-.07-.2-.11-.4-.11-.6s.04-.37.09-.55c.06-.18.15-.35.26-.5.1-.15.22-.3.35-.45.13-.15.28-.29.43-.4.15-.12.3-.22.45-.3.15-.08.3-.12.45-.12.18 0 .36.03.54.08.18.06.35.15.5.26.15.1.28.22.4.35.11.13.2.26.26.4.1.18.21.37.33.56.12.2.25.4.38.6.1.18.2.37.28.56.07.18.1.37.1.56.05.3.05.6.02.9l-.06 1.2c-.1.35-.38.6-.74.68l-1.3.28c-.4.08-.8.02-1.15-.18-.33-.2-.55-.5-.65-.82-.09-.27-.08-.55.03-.8l.26-.5c.08-.16.2-.3.35-.4s.3-.18.46-.22c.16-.04.32-.05.47-.02l.6.14.28.08c.11.03.22.06.32.08.1.02.2.02.3.02.13 0 .28-.02.43-.07.16-.05.3-.12.43-.2.13-.08.25-.18.35-.3.1-.11.2-.24.28-.38l.1-.12c.08-.13.12-.25.12-.38 0-.12-.03-.23-.08-.34-.06-.1-.13-.2-.2-.25-.07-.06-.15-.09-.25-.09-.22 0-.4.1-.5.28-.1.18-.1.38-.1.6 0 .21.03.4.08.57.06.2.14.38.25.56.1.18.2.35.3.5.1.16.2.3.3.4.1.11.2.18.2.22z" /></svg> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(template.capcutUrl)}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-blue-500"><path d="M12 2.04c-5.52 0-10 4.48-10 10 0 4.96 3.65 9.09 8.44 9.94.5.09.68-.22.68-.48v-1.7c-3.53.77-4.28-1.7-4.28-1.7-.58-1.47-1.41-1.86-1.41-1.86-1.15-.79.09-.78.09-.78 1.28.09 1.95 1.32 1.95 1.32 1.14 1.95 2.99 1.38 3.72 1.06.11-.82.45-1.38.82-1.7c-2.83-.32-5.81-1.41-5.81-6.3 0-1.4 1.15-2.55 2.5-3.45-.12-.32-.54-1.63.12-3.4s2.91-1.07 4.28-1.07c1.37 0 3.16.4 4.28 1.07s1.08 3.08.12 3.4c1.35.9 2.5 2.05 2.5 3.45 0 4.89-2.98 5.98-5.81 6.3.45.39.86 1.25.86 2.52v3.74c0 .26.18.57.68.48 4.79-.85 8.44-4.98 8.44-9.94 0-5.52-4.48-10-10-10z" /></svg> Facebook
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(template.capcutUrl)}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-gray-200"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.21-6.903L4.93 21.75H1.625l7.742-8.85L1.927 2.25h7.02l4.811 6.386zM17.404 19.53H19.53L8.272 4.135H6.142z" /></svg> X / Twitter
+        </a>
+      `;
+      document.getElementById('copy-btn').addEventListener('click', () => copyToClipboard(template.capcutUrl));
+      modalContainer.classList.remove('hidden');
+    }
+
+    // Hide share modal
+    function hideShareModal() {
+      modalContainer.classList.add('hidden');
+    }
+
+    // Toggle upload form visibility
+    toggleUploadBtn.addEventListener('click', () => {
+      uploadForm.classList.toggle('hidden');
+      uploadForm.classList.toggle('flex-col');
+      toggleUploadBtn.textContent = uploadForm.classList.contains('hidden') ? 'Upload a New Template' : 'Cancel Upload';
+    });
+
+    // Handle form submission
+    uploadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const newTemplate = {
+        capcutUrl: capcutUrlInput.value,
+        thumbnailUrl: thumbnailUrlInput.value,
+        creatorPfpUrl: creatorPfpUrlInput.value,
+        title: `CapCut Template: ${capcutUrlInput.value.split('/').pop()}`,
+        createdAt: serverTimestamp(),
+      };
+
+      try {
+        const templatesRef = collection(db, `/artifacts/${appId}/public/data/capcut-templates`);
+        await addDoc(templatesRef, newTemplate);
+        showCustomAlert('Template uploaded successfully!');
+        uploadForm.reset();
+        uploadForm.classList.add('hidden');
+        uploadForm.classList.remove('flex-col');
+        toggleUploadBtn.textContent = 'Upload a New Template';
+      } catch (e) {
+        showCustomAlert('Error uploading template.');
+        console.error("Error adding document: ", e);
+      }
+    });
+
+    // Event listener for clicks on the template grid (for share buttons)
+    templateGrid.addEventListener('click', (e) => {
+      const shareBtn = e.target.closest('.share-btn');
+      if (shareBtn) {
+        const templateId = shareBtn.getAttribute('data-template-id');
+        const template = templates.find(t => t.id === templateId);
+        if (template) {
+          showShareModal(template);
+        }
+      }
+    });
+
+    // Close modal when clicking outside
+    modalContainer.addEventListener('click', (e) => {
+      if (e.target === modalContainer) {
+        hideShareModal();
+      }
+    });
+
+    // Sign in and set up listener for Firestore
+    const startApp = async () => {
+      try {
+        if (initialAuthToken) {
+          await signInWithCustomToken(auth, initialAuthToken);
+        } else {
+          await signInAnonymously(auth);
+        }
+        
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            authReady = true;
+            const collectionPath = `/artifacts/${appId}/public/data/capcut-templates`;
+            const templatesRef = collection(db, collectionPath);
+            const q = query(templatesRef);
+
+            onSnapshot(q, (snapshot) => {
+              const fetchedTemplates = snapshot.docs.map(doc => ({
+                ...doc.data(),
+                id: doc.id,
+                title: doc.data().title || `CapCut Template: ${doc.id}`,
+              })).sort((a,b) => (b.createdAt?.toMillis() || 0) - (a.createdAt?.toMillis() || 0));
+              
+              loadingMessage.style.display = 'none';
+              renderTemplates(fetchedTemplates);
+            }, (error) => {
+              console.error("Firestore fetch error:", error);
+              loadingMessage.textContent = "Error loading templates.";
+            });
+          }
+        });
+
+      } catch (error) {
+        console.error("Firebase Auth Error:", error);
+        loadingMessage.textContent = "Authentication failed. Please try again.";
+      }
+    };
+    
+    startApp();
+  </script>
 </body>
 </html>
-
