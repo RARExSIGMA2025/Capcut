@@ -29,21 +29,22 @@
       transform: translateY(-6px) scale(1.02);
       box-shadow: 0 12px 40px rgba(0,0,0,0.5);
     }
-    .btn {
+    /* Updated button styling */
+    .btn-container {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       background: linear-gradient(90deg, #8e2de2, #4a00e0);
       color: white;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border-radius: 12px;
       font-weight: 600;
       transition: 0.3s;
       text-decoration: none;
       box-shadow: 0 0 15px rgba(142, 45, 226, 0.6);
     }
-    .btn:hover {
+    .btn-container:hover {
       background: linear-gradient(90deg, #4a00e0, #8e2de2);
       box-shadow: 0 0 25px rgba(142, 45, 226, 0.9);
       transform: scale(1.05);
@@ -59,7 +60,7 @@
 </head>
 <body class="text-white flex flex-col items-center p-6">
 
-  <!-- Profile Section -->
+  <!-- Profile Section - The hero section is kept as-is -->
   <div class="glass p-6 flex flex-col items-center text-center fade-in w-full max-w-md">
     <img src="https://raw.githubusercontent.com/RARExSIGMA2025/Capcut/main/pfp1.jpg" 
          alt="Profile Picture" 
@@ -68,35 +69,155 @@
     <p class="text-gray-300 text-sm">Explore Viral CapCut Templates ⚡</p>
   </div>
 
-  <!-- Templates List -->
+  <!-- Templates List - Now includes 10 new links starting from #101 -->
   <div class="grid gap-6 mt-8 w-full max-w-2xl">
-    <a href="https://www.capcut.com/template-detail/7453863803332119861?template_id=7453863803332119861&share_token=94546543-c81e-4029-a067-babc00d6057d" target="_blank" class="glass p-4 flex justify-between items-center">
+    <!-- Existing templates -->
+    <a href="https://www.capcut.com/template-detail/7453863803332119861?template_id=7453863803332119861&share_token=94546543-c81e-4029-a067-babc00d6057d" target="_blank" class="glass p-4 flex justify-between items-center group">
       <span class="text-lg font-medium">🔥 Viral Beat Template</span>
-      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
     </a>
 
-    <a href="https://www.capcut.com/template-detail/7466001911330770229?template_id=7466001911330770229&share_token=62df7695-d6e5-47e1-aa83-2d068621d839" target="_blank" class="glass p-4 flex justify-between items-center">
+    <a href="https://www.capcut.com/template-detail/7466001911330770229?template_id=7466001911330770229&share_token=62df7695-d6e5-47e1-aa83-2d068621d839" target="_blank" class="glass p-4 flex justify-between items-center group">
       <span class="text-lg font-medium">🎶 Smooth Edit</span>
-      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
     </a>
 
-    <a href="https://www.capcut.com/template-detail/7500385878221557053?template_id=7500385878221557053&share_token=9a659294-d16a-4b02-a911-c737baf6da71" target="_blank" class="glass p-4 flex justify-between items-center">
+    <a href="https://www.capcut.com/template-detail/7500385878221557053?template_id=7500385878221557053&share_token=9a659294-d16a-4b02-a911-c737baf6da71" target="_blank" class="glass p-4 flex justify-between items-center group">
       <span class="text-lg font-medium">⚡ Trending Reel</span>
-      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
     </a>
 
-    <a href="https://www.capcut.com/template-detail/7525116727382871357?template_id=7525116727382871357&share_token=3c06a810-ccdd-4ae1-9be6-e511d7356202" target="_blank" class="glass p-4 flex justify-between items-center">
+    <a href="https://www.capcut.com/template-detail/7525116727382871357?template_id=7525116727382871357&share_token=3c06a810-ccdd-4ae1-9be6-e511d7356202" target="_blank" class="glass p-4 flex justify-between items-center group">
       <span class="text-lg font-medium">✨ Aesthetic Flow</span>
-      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
     </a>
 
-    <a href="https://www.capcut.com/template-detail/7517695981433982269?template_id=7517695981433982269&share_token=f8a715ac-4b41-44ba-b00e-85e5a809923f" target="_blank" class="glass p-4 flex justify-between items-center">
+    <a href="https://www.capcut.com/template-detail/7517695981433982269?template_id=7517695981433982269&share_token=f8a715ac-4b41-44ba-b00e-85e5a809923f" target="_blank" class="glass p-4 flex justify-between items-center group">
       <span class="text-lg font-medium">🌌 Futuristic Vibe</span>
-      <button class="btn"><img src="https://seeklogo.com/images/C/capcut-logo-1B02A170C4-seeklogo.com.png" alt="CapCut" class="w-6 h-6"> Use</button>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
     </a>
+    
+    <!-- New templates added below -->
+    <a href="https://www.capcut.com/t/Zs8PVsWfo/" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #101</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/t/Zs8PgGXpr" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #102</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/template-detail/7497986635791895861?template_id=7497986635791895861&share_token=eb513307-2fea-43f7-a876-b86170b5f74a&enter_from=template_detail&region=US&language=en&platform=whatsapp&is_copy_link=0" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #103</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/t/Zs8PsVKHp" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #104</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/t/Zs8Pcs5KC" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #105</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/t/Zs8PwomsN" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #106</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/t/Zs85J79o1" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #107</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/t/Zs85RwCom" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #108</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/t/Zs85N12JW" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #109</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+    <a href="https://www.capcut.com/t/Zs85RRqxH" target="_blank" class="glass p-4 flex justify-between items-center group">
+      <span class="text-lg font-medium">CapCut Templates #110</span>
+      <span class="btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+          <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 22.8L16.2 16.2L14.7 17.7L21.3 24.3L14.7 30.9L16.2 32.4L24 25.8L31.8 32.4L33.3 30.9L26.7 24.3L33.3 17.7L31.8 16.2L24 22.8Z" fill="white"/>
+        </svg>
+        Use
+      </span>
+    </a>
+
   </div>
 
   <!-- Footer -->
   <p class="mt-10 text-gray-400 text-sm">Made with ❤️ by Classy</p>
 </body>
 </html>
+
